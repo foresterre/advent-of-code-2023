@@ -2,6 +2,7 @@ package solution;
 
 import reader.DayReader;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
 public record Solution<T>(Parse<T> parse, Solver<T> solver) {
@@ -23,5 +24,14 @@ public record Solution<T>(Parse<T> parse, Solver<T> solver) {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public String runString(String input) {
+        var inputStream = new ByteArrayInputStream(input.getBytes());
+
+        T parsed = parse.from(inputStream);
+
+        return solver.solve(parsed);
+
     }
 }
