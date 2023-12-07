@@ -1,8 +1,5 @@
 package day04;
 
-import day02.DayTwoParser;
-import day02.DayTwoPartOneSolver;
-import day02.DayTwoPartTwoSolver;
 import org.junit.jupiter.api.Test;
 import solution.Solution;
 
@@ -11,8 +8,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class Day04Test {
     @Test
     void part1_example() {
-        var parser = new DayTwoParser();
-        var solver = new DayTwoPartOneSolver();
+        var parser = new DayFourParser();
+        var solver = new DayFourPartOneSolver();
 
         var solution = new Solution<>(parser, solver);
         var answer = solution.runFile("4_example.txt");
@@ -22,20 +19,20 @@ public class Day04Test {
 
     @Test
     void part1() {
-        var parser = new DayTwoParser();
-        var solver = new DayTwoPartOneSolver();
+        var parser = new DayFourParser();
+        var solver = new DayFourPartOneSolver();
 
         var solution = new Solution<>(parser, solver);
         var answer = solution.runDay(4);
 
         // Solution part 1!
-        assertThat(answer).isEqualTo("todo");
+        assertThat(answer).isEqualTo("28750");
     }
 
     @Test
     void part2_example() {
-        var parser = new DayTwoParser();
-        var solver = new DayTwoPartTwoSolver();
+        var parser = new DayFourParser();
+        var solver = new DayFourPartTwoSolver();
 
         var solution = new Solution<>(parser, solver);
         var answer = solution.runFile("4_example.txt");
@@ -45,8 +42,8 @@ public class Day04Test {
 
     @Test
     void part2() {
-        var parser = new DayTwoParser();
-        var solver = new DayTwoPartTwoSolver();
+        var parser = new DayFourParser();
+        var solver = new DayFourPartTwoSolver();
 
         var solution = new Solution<>(parser, solver);
         var answer = solution.runDay(4);
