@@ -18,14 +18,17 @@ public class DayFourParser implements Parse<Stream<Card>> {
         return reader.lines()
                 .map((line) -> {
                     var card = line.split(": ");
+                    var id = card[0].replace("Card", "").trim();
+
                     var numbers = card[1].split(" \\| ");
                     var winning = numbers[0].trim().split("\\s+");
                     var drawn = numbers[1].trim().split("\\s+");
 
+                    var cardId = Integer.parseInt(id);
                     var winningNums = Arrays.stream(winning).map(Integer::parseInt).collect(Collectors.toSet());
                     var drawnNums = Arrays.stream(drawn).map(Integer::parseInt).collect(Collectors.toSet());
 
-                    return new Card(winningNums, drawnNums);
+                    return new Card(cardId, winningNums, drawnNums);
                 });
     }
 }

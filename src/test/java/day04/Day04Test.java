@@ -37,7 +37,7 @@ public class Day04Test {
         var solution = new Solution<>(parser, solver);
         var answer = solution.runFile("4_example.txt");
 
-        assertThat(answer).isEqualTo("todo");
+        assertThat(answer).isEqualTo("30");
     }
 
     @Test
@@ -49,6 +49,6 @@ public class Day04Test {
         var answer = solution.runDay(4);
 
         // Solution part 2!
-        assertThat(answer).isEqualTo("todo");
+        assertThat(answer).isEqualTo("10212704");
     }
 }
