@@ -12,7 +12,7 @@ public class Day03Test {
         var solver = new DayThreePartOneSolver();
 
         var solution = new Solution<>(parser, solver);
-        var answer = solution.runFile("3_example.txt");
+        var answer = solution.runFile(3, "example");
 
         assertThat(answer).isEqualTo("4361");
     }
@@ -219,7 +219,7 @@ public class Day03Test {
         var solver = new DayThreePartTwoSolver();
 
         var solution = new Solution<>(parser, solver);
-        var answer = solution.runFile("3_example.txt");
+        var answer = solution.runFile(3, "example");
 
         assertThat(answer).isEqualTo("467835");
     }

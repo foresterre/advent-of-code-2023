@@ -16,8 +16,8 @@ public record Solution<T>(Parse<T> parse, Solver<T> solver) {
         }
     }
 
-    public String runFile(String resourceFileName) {
-        try(var contents = DayReader.readFile(resourceFileName)) {
+    public String runFile(int day, String resourceFileName) {
+        try(var contents = DayReader.readFile(day, resourceFileName)) {
             T parsed = parse.from(contents);
 
             return solver.solve(parsed);

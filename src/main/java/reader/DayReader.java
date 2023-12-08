@@ -1,15 +1,17 @@
 package reader;
 
+import java.io.File;
 import java.io.InputStream;
 
 public class DayReader {
     public static InputStream readDay(int day) {
-        var fileName = makeFileName(day);
+        var fileName = makeFolderName(day) + "input";
         return readResourceFile(fileName);
     }
 
-    public static InputStream readFile(String fileName) {
-        return readResourceFile(fileName);
+    public static InputStream readFile(int day, String fileName) {
+        var path = makeFolderName(day) + fileName;
+        return readResourceFile(path);
     }
 
     private static InputStream readResourceFile(String fileName) {
@@ -20,7 +22,7 @@ public class DayReader {
         return inputStream;
     }
 
-    private static String makeFileName(int day) {
-        return String.format("%d.txt", day);
+    private static String makeFolderName(int day) {
+        return day + File.separator;
     }
 }

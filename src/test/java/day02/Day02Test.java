@@ -13,7 +13,7 @@ class Day02Test {
         var solver = new DayTwoPartOneSolver();
 
         var solution = new Solution<>(parser, solver);
-        var answer = solution.runFile("2_example.txt");
+        var answer = solution.runFile(2, "example");
 
         assertThat(answer).isEqualTo("8");
     }
@@ -36,7 +36,7 @@ class Day02Test {
         var solver = new DayTwoPartTwoSolver();
 
         var solution = new Solution<>(parser, solver);
-        var answer = solution.runFile("2_example.txt");
+        var answer = solution.runFile(2, "example");
 
         assertThat(answer).isEqualTo("2286");
     }

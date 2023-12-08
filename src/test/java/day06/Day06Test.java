@@ -1,4 +1,4 @@
-package day05;
+package day06;
 
 
 import org.junit.jupiter.api.Test;
@@ -6,11 +6,11 @@ import solution.Solution;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Day05Test {
+public class Day06Test {
     @Test
     void part1_example() {
-        var parser = new DayFiveParser();
-        var solver = new DayFiveSolver();
+        var parser = new DaySixParser();
+        var solver = new DaySixSolver();
 
         var solution = new Solution<>(parser, solver);
         var answer = solution.runFile(5, "example");
@@ -20,8 +20,8 @@ public class Day05Test {
 
     @Test
     void part1() {
-        var parser = new DayFiveParser();
-        var solver = new DayFiveSolver();
+        var parser = new DaySixParser();
+        var solver = new DaySixSolver();
 
         var solution = new Solution<>(parser, solver);
         var answer = solution.runDay(5);
@@ -32,8 +32,8 @@ public class Day05Test {
 
     @Test
     void part2_example() {
-        var parser = new DayFiveParser();
-        var solver = new DayFiveSolver();
+        var parser = new DaySixParser();
+        var solver = new DaySixSolver();
 
         var solution = new Solution<>(parser, solver);
         var answer = solution.runFile(5, "example");
@@ -43,8 +43,8 @@ public class Day05Test {
 
     @Test
     void part2() {
-        var parser = new DayFiveParser();
-        var solver = new DayFiveSolver();
+        var parser = new DaySixParser();
+        var solver = new DaySixSolver();
 
         var solution = new Solution<>(parser, solver);
         var answer = solution.runDay(5);
