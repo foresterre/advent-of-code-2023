@@ -33,7 +33,7 @@ public class DayEightPartOneSolver implements Solver<Network> {
         };
 
         var fin = instructions
-                    .takeWhile(_v -> ongoing.get()) // Probably not lazy :(
+                    .takeWhile(_v -> ongoing.get())
                     .mapToObj(c -> (char) c)
                     .reduce(initialState, f, State::merge);
 

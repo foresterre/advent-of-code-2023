@@ -39,7 +39,7 @@ public class DayEightPartTwoSolver implements Solver<Network> {
                     var initialState = new State(0, node.current());
 
                     var fin = instructions
-                            .takeWhile(_v -> ongoing.get()) // Probably not lazy :(
+                            .takeWhile(_v -> ongoing.get())
                             .mapToObj(c -> (char) c)
                             .reduce(initialState, f, State::merge);
 
