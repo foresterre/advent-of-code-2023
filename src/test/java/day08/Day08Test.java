@@ -11,7 +11,7 @@ public class Day08Test {
     @Test
     void part1_example() {
         var parser = new DayEightParser();
-        var solver = new DayEightSolver();
+        var solver = new DayEightPartOneSolver();
 
         var solution = new Solution<>(parser, solver);
         var answer = solution.runFile(DAY, "example");
@@ -22,7 +22,7 @@ public class Day08Test {
     @Test
     void part1_example2() {
         var parser = new DayEightParser();
-        var solver = new DayEightSolver();
+        var solver = new DayEightPartOneSolver();
 
         var solution = new Solution<>(parser, solver);
         var answer = solution.runFile(DAY, "example2");
@@ -33,34 +33,34 @@ public class Day08Test {
     @Test
     void part1() {
         var parser = new DayEightParser();
-        var solver = new DayEightSolver();
+        var solver = new DayEightPartOneSolver();
         var solution = new Solution<>(parser, solver);
         var answer = solution.runDay(DAY);
 
         // Solution part 1!
-        assertThat(answer).isEqualTo("todo");
+        assertThat(answer).isEqualTo("21389");
     }
 
     @Test
     void part2_example() {
         var parser = new DayEightParser();
-        var solver = new DayEightSolver();
+        var solver = new DayEightPartTwoSolver();
 
         var solution = new Solution<>(parser, solver);
-        var answer = solution.runFile(DAY, "example");
+        var answer = solution.runFile(DAY, "example3");
 
-        assertThat(answer).isEqualTo("todo");
+        assertThat(answer).isEqualTo("6");
     }
 
     @Test
     void part2() {
         var parser = new DayEightParser();
-        var solver = new DayEightSolver();
+        var solver = new DayEightPartTwoSolver();
 
         var solution = new Solution<>(parser, solver);
         var answer = solution.runDay(DAY);
 
         // Solution part 2!
-        assertThat(answer).isEqualTo("todo");
+        assertThat(answer).isEqualTo("21083806112641");
     }
 }
