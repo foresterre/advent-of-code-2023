@@ -11,7 +11,7 @@ public class Day10Test {
     @Test
     void part1_example() {
         var parser = new DayTenParser();
-        var solver = new DayTenSolver();
+        var solver = new DayTenPartOneSolver();
 
         var solution = new Solution<>(parser, solver);
         var answer = solution.runFile(DAY, "example");
@@ -22,7 +22,7 @@ public class Day10Test {
     @Test
     void part1_example2() {
         var parser = new DayTenParser();
-        var solver = new DayTenSolver();
+        var solver = new DayTenPartOneSolver();
 
         var solution = new Solution<>(parser, solver);
         var answer = solution.runFile(DAY, "example2");
@@ -33,7 +33,7 @@ public class Day10Test {
     @Test
     void part1() {
         var parser = new DayTenParser();
-        var solver = new DayTenSolver();
+        var solver = new DayTenPartOneSolver();
 
         var solution = new Solution<>(parser, solver);
         var answer = solution.runDay(DAY);
@@ -45,18 +45,51 @@ public class Day10Test {
     @Test
     void part2_example() {
         var parser = new DayTenParser();
-        var solver = new DayTenSolver();
+        var solver = new DayTenPartTwoSolver();
 
         var solution = new Solution<>(parser, solver);
         var answer = solution.runFile(DAY, "example");
 
-        assertThat(answer).isEqualTo("todo");
+        assertThat(answer).isEqualTo("1");
+    }
+
+    @Test
+    void part2_example3() {
+        var parser = new DayTenParser();
+        var solver = new DayTenPartTwoSolver();
+
+        var solution = new Solution<>(parser, solver);
+        var answer = solution.runFile(DAY, "example3");
+
+        assertThat(answer).isEqualTo("4");
+    }
+
+    @Test
+    void part2_example4() {
+        var parser = new DayTenParser();
+        var solver = new DayTenPartTwoSolver();
+
+        var solution = new Solution<>(parser, solver);
+        var answer = solution.runFile(DAY, "example4");
+
+        assertThat(answer).isEqualTo("4");
+    }
+
+    @Test
+    void part2_example5() {
+        var parser = new DayTenParser();
+        var solver = new DayTenPartTwoSolver();
+
+        var solution = new Solution<>(parser, solver);
+        var answer = solution.runFile(DAY, "example5");
+
+        assertThat(answer).isEqualTo("8");
     }
 
     @Test
     void part2() {
         var parser = new DayTenParser();
-        var solver = new DayTenSolver();
+        var solver = new DayTenPartTwoSolver();
 
         var solution = new Solution<>(parser, solver);
         var answer = solution.runDay(DAY);

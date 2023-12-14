@@ -4,7 +4,7 @@ import solution.Solver;
 
 import java.util.*;
 
-public class DayTenSolver implements Solver<Survey> {
+public class DayTenPartOneSolver implements Solver<Survey> {
     @Override
     public String solve(Survey input) {
         var graph = input.graph();

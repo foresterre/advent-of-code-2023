@@ -10,7 +10,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class DayTenParser implements Parse<Survey> {
@@ -78,7 +77,7 @@ public class DayTenParser implements Parse<Survey> {
         startConnections.forEach(vertex -> addEdge(graph, rowsBound, colsBound, startNode, vertex));
 
 
-        return new Survey(graph, startNode);
+        return new Survey(graph, startNode, rows);
     }
 
     private static void addEdge(Map<Vertex, List<Vertex>> graph, int rowsBound, int colsBound, Vertex from, Vertex to) {
